@@ -15,11 +15,13 @@ if __name__ == '__main__':
     print(f"The sum of numbers before the last positive element is: {s}")
     a = int(input("Enter the a number of the border:"))
     b = int(input("Enter the b number of the border:"))
+    temp = []
     for el in A:
         if a < abs(el) < b:
-            A.pop(A.index(el))
-    print(len(A))
-    if length > len(A):
-        for i in range(length - len(A)):
-            A.append(0)
-    print(A)
+            continue
+        else:
+            temp.append(el)
+    if length > len(temp):
+        for i in range(length - len(temp)):
+            temp.append(0)
+    print(temp)
